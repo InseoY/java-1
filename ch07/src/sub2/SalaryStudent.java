@@ -1,15 +1,15 @@
 package sub2;
 
-public class SalaryStudent {
+
+public class SalaryStudent extends Student {
 	
-	private String name;
-	private int age;
-	private String school;
-	private String major;
 	private String company;
 	
-	
 	// 생성자
+	public SalaryStudent(String name, int age, String school, String major, String company) {
+		super(name, age, school, major);
+		this.company = company;
+	}
 	
 	public void hello() {
 		System.out.println(name+" 입니다.");
@@ -18,4 +18,10 @@ public class SalaryStudent {
 		System.out.println(major+"을 공부 입니다.");
 		System.out.println(company+"에 재직중 입니다.");
 	}
+
+	
 }
+
+
+
+

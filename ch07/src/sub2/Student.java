@@ -1,13 +1,16 @@
 package sub2;
 
-public class Student {
+public class Student extends Person {
 
-	private String name;
-	private int age;
-	private String school;
-	private String major;
+	protected String school;
+	protected String major;
 	
 	// 생성자
+	public Student(String name, int age, String school, String major) {
+		super(name, age);
+		this.school = school;
+		this.major = major;
+	}
 	
 	public void hello() {
 		System.out.println(name+" 입니다.");
@@ -15,5 +18,7 @@ public class Student {
 		System.out.println(school+"학생 입니다.");
 		System.out.println(major+"을 공부 입니다.");
 	}
+
+	
 	
 }
